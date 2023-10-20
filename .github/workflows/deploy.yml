@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - test-npm  # Change this to your main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 21
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Check HTML with VNU
+      run: java -jar node_modules/vnu-jar/build/dist/vnu.jar --errors index.html
+
+    - name: Minify HTML
+      run: npx html-minifier-terser --input-file index.html --output index.html
+
+    - name: Minify CSS
+      run: npx stylelint --fix main.css
