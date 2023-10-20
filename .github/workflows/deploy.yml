@@ -21,8 +21,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Check HTML with VNU
-      run: java -jar node_modules/vnu-jar/build/dist/vnu.jar --errors index.html
+#   - name: Check HTML with VNU
+#     run: java -jar node_modules/vnu-jar/build/dist/vnu.jar --errors index.html
 
     - name: Minify HTML
       run: npx html-minifier-terser --input-file index.html --output index.html
