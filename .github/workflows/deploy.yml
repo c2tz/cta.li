@@ -21,12 +21,11 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-#   - name: Check HTML with VNU
+    - name: Minify HTML and CSS
+      run: npx html-minifier-terser --input-dir . --output-dir . --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true
+
+#   - name: Verify HTML
 #     run: java -jar node_modules/vnu-jar/build/dist/vnu.jar --errors index.html
 
-    - name: Minify HTML
-      run: npx html-minifier-terser --input-dir . --output-dir . --file-ext html
-
-
-    - name: Minify CSS
+    - name: Verify CSS
       run: npx stylelint --fix main.css
