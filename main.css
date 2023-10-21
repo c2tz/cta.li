@@ -7,47 +7,11 @@
     border-color: #e5e7eb;
 }
 
-* {
-    --tw-ring-inset: var(--tw-empty);
-    --tw-ring-offset-width: 0;
-    --tw-ring-offset-color: #fff;
-    --tw-ring-color: rgb(59 130 246 / 50%);
-    --tw-ring-offset-shadow: 0 0 #0000;
-    --tw-ring-shadow: 0 0 #0000;
-    --tw-shadow: 0 0 #0000;
-}
-
 :root {
     --scrollbar-track-color: #fff;
     --scrollbar-thumb-color: #616200;
+
     tab-size: 4;
-}
-
-:-moz-focusring {
-    outline: 1px dotted ButtonText;
-}
-
-:-moz-ui-invalid {
-    box-shadow: none;
-}
-
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-    height: auto;
-}
-
-::-webkit-search-decoration {
-    appearance: none;
-}
-
-::-webkit-file-upload-button {
-    appearance: auto;
-    font: inherit;
-}
-
-[type="search"] {
-    appearance: textfield;
-    outline-offset: -2px;
 }
 
 abbr[title] {
@@ -59,16 +23,15 @@ a {
     text-decoration: inherit;
 }
 
-body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    font-family: inherit;
-    line-height: inherit;
-}
-
 html {
     text-size-adjust: 100%;
     line-height: 1.5;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    line-height: inherit;
 }
 
 h1,
@@ -94,42 +57,44 @@ img {
 }
 
 @media (width >=768px) {
-    .md\:aspect-square {
+    .md-aspect-square {
         aspect-ratio: 1/1;
     }
 }
 
-.bg-hex-383934 {
+.bg-hex-d9ead7 {
     --tw-bg-opacity: 1;
-}
 
-.bg-hex-D9EAD7 {
-    --tw-bg-opacity: 1;
     background-color: rgb(217 234 215 / var(--tw-bg-opacity));
 }
 
-.bg-hex-F6F3D4 {
+.bg-hex-f6f3d4 {
     --tw-bg-opacity: 1;
+
     background-color: rgb(246 243 212 / var(--tw-bg-opacity));
 }
 
-.bg-hex-FCF9EF {
+.bg-hex-fcf9ef {
     --tw-bg-opacity: 1;
+
     background-color: rgb(252 249 239 / var(--tw-bg-opacity));
 }
 
-.bg-hex-DBEA8D {
+.bg-hex-dbea8d {
     --tw-bg-opacity: 1;
+
     background-color: rgb(219 234 141 / var(--tw-bg-opacity));
 }
 
-.bg-hex-1A1D1A {
+.bg-hex-1a1d1a {
     --tw-bg-opacity: 1;
+
     background-color: rgb(26 29 26 / var(--tw-bg-opacity));
 }
 
-.bg-hex-EDEFE3 {
+.bg-hex-edefe3 {
     --tw-bg-opacity: 1;
+
     background-color: rgb(237 239 227 / var(--tw-bg-opacity));
 }
 
@@ -155,7 +120,6 @@ img {
 }
 
 .flex {
-    display: flex;
     display: flex;
 }
 
@@ -238,8 +202,7 @@ img {
     line-height: 1;
 }
 
-.text-14px,
-.text-11px {
+.text-14px {
     font-size: 14px;
     line-height: 1;
 }
@@ -347,17 +310,20 @@ img {
 
 .text-hex-fff {
     --tw-text-opacity: 1;
+
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-hex-363C33 {
+.text-hex-363c33 {
     --tw-text-opacity: 1;
+
     color: rgb(54 60 51 / var(--tw-text-opacity));
     font-size: 16px;
 }
 
 .text-hex-000 {
     --tw-text-opacity: 1;
+
     color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
@@ -369,13 +335,10 @@ img {
     text-transform: uppercase;
 }
 
-.rounded-full {
-    border-radius: 9999px;
-}
-
 .bg-hex-383934 {
     --tw-bg-opacity: 1;
-    background-color: rgba(56,57,52,var(--tw-bg-opacity));
+    
+    background-color: rgb(56 57 52 / var(--tw-bg-opacity));
 }
 
 .w-full {
@@ -388,31 +351,25 @@ img {
 
 .gap-30px {
     gap: 30px;
-    gap: 30px;
 }
 
 .gap-20px {
-    gap: 20px;
     gap: 20px;
 }
 
 .gap-15px {
     gap: 15px;
-    gap: 15px;
 }
 
 .gap-5px {
-    gap: 5px;
     gap: 5px;
 }
 
 .gap-10px {
     gap: 10px;
-    gap: 10px;
 }
 
 .gap-40px {
-    gap: 40px;
     gap: 40px;
 }
 
@@ -437,109 +394,104 @@ img {
 }
 
 @media (width >=768px) {
-    .md\:h-full {
+    .md-h-full {
         height: 100%;
     }
 
-    .md\:h-150px {
+    .md-h-150px {
         height: 150px;
     }
 
-    .md\:h-120px {
+    .md-h-120px {
         height: 120px;
     }
 
-    .md\:py-80px {
+    .md-py-80px {
         padding-top: 80px;
         padding-bottom: 80px;
     }
 
-    .md\:py-10px {
+    .md-py-10px {
         padding-top: 10px;
         padding-bottom: 10px;
     }
 
-    .md\:px-10px {
+    .md-px-10px {
         padding-left: 10px;
         padding-right: 10px;
     }
 
-    .md\:px-20px {
+    .md-px-20px {
         padding-left: 20px;
         padding-right: 20px;
     }
 
-    .md\:w-150px {
+    .md-w-150px {
         width: 150px;
     }
 
-    .md\:grid-cols-2 {
+    .md-grid-cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .md\:grid-cols-3 {
+    .md-grid-cols-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .md\:grid-cols-6 {
+    .md-grid-cols-6 {
         grid-template-columns: repeat(6, minmax(0, 1fr));
     }
 
-    .md\:col-span-3 {
+    .md-col-span-3 {
         grid-column: span 3 / span 3;
     }
 
-    .md\:auto-rows-min {
+    .md-auto-rows-min {
         grid-auto-rows: min-content;
     }
 }
 
 @media (width >=1024px) {
-    .lg\:rounded-30px {
+    .lg-rounded-30px {
         border-radius: 30px;
     }
 
-    .lg\:h-180px {
+    .lg-h-180px {
         height: 180px;
     }
 
-    .lg\:p-40px {
+    .lg-p-40px {
         padding: 40px;
     }
 
-    .lg\:py-50px {
+    .lg-py-50px {
         padding-top: 50px;
         padding-bottom: 50px;
     }
 
-    .lg\:px-20px {
+    .lg-px-20px {
         padding-left: 20px;
         padding-right: 20px;
     }
 
-    .lg\:w-180px {
+    .lg-w-180px {
         width: 180px;
     }
 
-    .lg\:gap-20px {
-        gap: 20px;
+    .lg-gap-20px {
         gap: 20px;
     }
 
-    .lg\:grid-cols-3 {
+    .lg-grid-cols-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
 @media (width >=1280px) {
-    .xl\:py-120px {
+    .xl-py-120px {
         padding-top: 120px;
         padding-bottom: 120px;
     }
-}
-
-body {
-    font-family: "Roboto", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -553,7 +505,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    
     background-color: #616200;
 }
 
@@ -582,7 +533,7 @@ header.svelte-1ena5bt {
     font-display:swap;
     src:local("Roboto"),
     local("Roboto-Regular"),
-    url(/fonts/roboto-v30-regular-latin.woff2)format("woff2");
+    url("/fonts/roboto-v30-regular-latin.woff2")format("woff2");
     unicode-range:U+0000-00FF,
     U+0131,
     U+0152-0153,
@@ -601,6 +552,7 @@ header.svelte-1ena5bt {
     U+FEFF,
     U+FFFD
   }
+
   @font-face {
     font-family:Roboto;
     font-style:italic;
@@ -608,7 +560,7 @@ header.svelte-1ena5bt {
     font-display:swap;
     src:local("Roboto Italic"),
     local("Roboto-Italic"),
-    url(/fonts/roboto-v30-regular-italic-latin.woff2)format("woff2");
+    url("/fonts/roboto-v30-regular-italic-latin.woff2")format("woff2");
     unicode-range:U+0000-00FF,
     U+0131,
     U+0152-0153,
@@ -627,6 +579,7 @@ header.svelte-1ena5bt {
     U+FEFF,
     U+FFFD
   }
+
   @font-face {
     font-family:Roboto;
     font-style:normal;
@@ -634,7 +587,7 @@ header.svelte-1ena5bt {
     font-display:swap;
     src:local("Roboto Bold"),
     local("Roboto-Bold"),
-    url(/fonts/roboto-v30-bold-latin.woff2)format("woff2");
+    url("/fonts/roboto-v30-bold-latin.woff2")format("woff2");
     unicode-range:U+0000-00FF,
     U+0131,
     U+0152-0153,
