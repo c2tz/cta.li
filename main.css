@@ -52,8 +52,29 @@ img {
     display: block;
 }
 
+footer {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    padding-top: 2em;
+    max-width: 800px;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
 .aspect-square {
     aspect-ratio: 1/1;
+}
+
+#text-footer {
+    margin-top: auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+#text-footer li {
+    display: inline;
 }
 
 @media (width >=768px) {
@@ -304,9 +325,11 @@ img {
     padding-right: 10px;
 }
 
+
+/* 
 .pb-50px {
     padding-bottom: 50px;
-}
+} */
 
 .text-hex-fff {
     --tw-text-opacity: 1;
@@ -337,7 +360,7 @@ img {
 
 .bg-hex-383934 {
     --tw-bg-opacity: 1;
-    
+
     background-color: rgb(56 57 52 / var(--tw-bg-opacity));
 }
 
@@ -466,7 +489,7 @@ img {
 
     .lg-py-50px {
         padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 0;
     }
 
     .lg-px-20px {
@@ -527,82 +550,82 @@ header.svelte-1ena5bt {
 }
 
 @font-face {
-    font-family:Roboto;
-    font-style:normal;
-    font-weight:400;
-    font-display:swap;
-    src:local("Roboto"),
-    local("Roboto-Regular"),
-    url("/fonts/roboto-v30-regular-latin.woff2")format("woff2");
-    unicode-range:U+0000-00FF,
-    U+0131,
-    U+0152-0153,
-    U+02BB-02BC,
-    U+02C6,
-    U+02DA,
-    U+02DC,
-    U+2000-206F,
-    U+2074,
-    U+20AC,
-    U+2122,
-    U+2191,
-    U+2193,
-    U+2212,
-    U+2215,
-    U+FEFF,
-    U+FFFD
-  }
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Roboto"),
+        local("Roboto-Regular"),
+        url("/fonts/roboto-v30-regular-latin.woff2")format("woff2");
+    unicode-range: U+0000-00FF,
+        U+0131,
+        U+0152-0153,
+        U+02BB-02BC,
+        U+02C6,
+        U+02DA,
+        U+02DC,
+        U+2000-206F,
+        U+2074,
+        U+20AC,
+        U+2122,
+        U+2191,
+        U+2193,
+        U+2212,
+        U+2215,
+        U+FEFF,
+        U+FFFD
+}
 
-  @font-face {
-    font-family:Roboto;
-    font-style:italic;
-    font-weight:400;
-    font-display:swap;
-    src:local("Roboto Italic"),
-    local("Roboto-Italic"),
-    url("/fonts/roboto-v30-regular-italic-latin.woff2")format("woff2");
-    unicode-range:U+0000-00FF,
-    U+0131,
-    U+0152-0153,
-    U+02BB-02BC,
-    U+02C6,
-    U+02DA,
-    U+02DC,
-    U+2000-206F,
-    U+2074,
-    U+20AC,
-    U+2122,
-    U+2191,
-    U+2193,
-    U+2212,
-    U+2215,
-    U+FEFF,
-    U+FFFD
-  }
+@font-face {
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Roboto Italic"),
+        local("Roboto-Italic"),
+        url("/fonts/roboto-v30-regular-italic-latin.woff2")format("woff2");
+    unicode-range: U+0000-00FF,
+        U+0131,
+        U+0152-0153,
+        U+02BB-02BC,
+        U+02C6,
+        U+02DA,
+        U+02DC,
+        U+2000-206F,
+        U+2074,
+        U+20AC,
+        U+2122,
+        U+2191,
+        U+2193,
+        U+2212,
+        U+2215,
+        U+FEFF,
+        U+FFFD
+}
 
-  @font-face {
-    font-family:Roboto;
-    font-style:normal;
-    font-weight:700;
-    font-display:swap;
-    src:local("Roboto Bold"),
-    local("Roboto-Bold"),
-    url("/fonts/roboto-v30-bold-latin.woff2")format("woff2");
-    unicode-range:U+0000-00FF,
-    U+0131,
-    U+0152-0153,
-    U+02BB-02BC,
-    U+02C6,
-    U+02DA,
-    U+02DC,
-    U+2000-206F,
-    U+2074,
-    U+20AC,
-    U+2122,
-    U+2191,
-    U+2193,
-    U+2212,
-    U+2215,
-    U+FEFF,
-    U+FFFD
-  }
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local("Roboto Bold"),
+        local("Roboto-Bold"),
+        url("/fonts/roboto-v30-bold-latin.woff2")format("woff2");
+    unicode-range: U+0000-00FF,
+        U+0131,
+        U+0152-0153,
+        U+02BB-02BC,
+        U+02C6,
+        U+02DA,
+        U+02DC,
+        U+2000-206F,
+        U+2074,
+        U+20AC,
+        U+2122,
+        U+2191,
+        U+2193,
+        U+2212,
+        U+2215,
+        U+FEFF,
+        U+FFFD
+}
