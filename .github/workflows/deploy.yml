@@ -21,8 +21,10 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Minify HTML and CSS
+    - name: Minify HTML
       run: html-minifier-terser --input-dir . --output-dir . --file-ext html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true # je doit trouver comment ajouter aussi le css sur une ligne
+
+    - name: Minify CSS
       run: html-minifier-terser --input-dir . --output-dir . --file-ext css --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true
 
 #   - name: Verify HTML
