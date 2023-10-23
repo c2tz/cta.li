@@ -27,8 +27,11 @@ jobs:
     - name: Minify CSS
       run: npx html-minifier-terser --input-dir . --output-dir . --file-ext css --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true
 
-    - name: Verify HTML
-      run: java -jar node_modules/vnu-jar/build/dist/vnu.jar --errors index.html
+    - name: HTML5 Validator
+      uses: Cyb3r-Jak3/html5validator-action@v7.2.0 
+
+#    - name: Verify HTML
+#      run: java -jar node_modules/vnu-jar/build/dist/vnu.jar --errors index.html
 
     - name: Verify CSS
       run: npx stylelint --fix main.css
