@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - test-npm  # Change this to your main branch
+      - test-workflow  # Change this to your main branch
 
 jobs:
   build:
