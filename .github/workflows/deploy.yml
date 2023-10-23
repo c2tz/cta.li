@@ -1,9 +1,6 @@
 name: Deploy to GitHub Pages
 
-on:
-  push:
-    branches:
-      - test-workflow  # Change this to your main branch
+on: [pull_request, push]
 
 jobs:
   build:
@@ -20,21 +17,15 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-
-    - name: Minify HTML
-      run: npx html-minifier-terser --input-dir . --output-dir . --file-ext html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true # je doit trouver comment ajouter aussi le css sur une ligne
-
-    - name: Minify CSS
-      run: npx html-minifier-terser --input-dir . --output-dir . --file-ext css --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true
-
-    - name: HTML5Validator
-      uses: Cyb3r-Jak3/html5validator-action@v7.2.0
-      with:
-        root: /
-        skip_git_check: true
-
-#    - name: Verify HTML
-#      run: java -jar node_modules/vnu-jar/build/dist/vnu.jar --errors index.html
-
+      
     - name: Verify CSS
       run: npx stylelint --fix main.css
+
+#    - name: Minify HTML
+#      run: npx html-minifier-terser --input-dir . --output-dir . --file-ext html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true # je doit trouver comment ajouter aussi le css sur une ligne
+
+#    - name: Minify CSS
+#      run: npx html-minifier-terser --input-dir . --output-dir . --file-ext css --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true
+
+    - name: Verify HTML
+      run: java -jar node_modules/vnu-jar/build/dist/vnu.jar --errors index.html
