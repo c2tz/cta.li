@@ -1,0 +1,12 @@
+/lock
+/nginx-tmp/
+/node_modules/
+/releases-base
+/static-tmp/
+/venv/
+/fonts/
+/picture/
+/package.json
+/.prettierrc
+*.json
+*.yml
