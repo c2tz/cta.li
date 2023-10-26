@@ -1,0 +1,20 @@
+<svg
+   height="19.200001"
+   viewBox="0 0 24 19.200001"
+   width="24"
+   fill="#363c33"
+   version="1.1"
+   id="svg2"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <path
+     d="m 0,-2.5 h 24 v 24 H 0 Z"
+     fill="none"
+     id="path1" />
+  <path
+     d="M 21.6,0 H 2.4 C 1.08,0 0.012,1.08 0.012,2.4 L 0,16.8 c 0,1.32 1.08,2.4 2.4,2.4 h 19.2 c 1.32,0 2.4,-1.08 2.4,-2.4 V 2.4 C 24,1.08 22.92,0 21.6,0 Z m 0,4.8 -9.6,6 -9.6,-6 V 2.4 l 9.6,6 9.6,-6 z"
+     id="path2"
+     style="stroke-width:1.2" />
+</svg>
