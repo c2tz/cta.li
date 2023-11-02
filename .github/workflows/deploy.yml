@@ -1,6 +1,12 @@
 name: Deploy to GitHub Pages
 
-on: [pull_request, push]
+on:
+  push:
+    branches:
+      - test-workflow
+  pull_request:
+    branches:
+      - test-workflow
 
 jobs:
   build:
