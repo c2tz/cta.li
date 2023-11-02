@@ -99,6 +99,12 @@ footer a {
 	background-color: rgb(246 243 212 / var(--tw-bg-opacity));
 }
 
+.bg-hex-ffcdd2 {
+	--tw-bg-opacity: 1;
+
+	background-color: rgb(255 205 210 / var(--tw-bg-opacity));
+}
+
 .bg-hex-fcf9ef {
 	--tw-bg-opacity: 1;
 
