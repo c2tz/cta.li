@@ -3,32 +3,38 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - test-npm  # Change this to your main branch
+      - test-workflow
+  pull_request:
+    branches:
+      - test-workflow
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 21
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 21
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Minify HTML
-      run: npx html-minifier-terser --input-dir . --output-dir . --file-ext html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true # je doit trouver comment ajouter aussi le css sur une ligne
+      - name: Beautify HTML and CSS # use it on dev branch only
+        run: npx prettier --write .
 
-    - name: Minify CSS
-      run: npx html-minifier-terser --input-dir . --output-dir . --file-ext css --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true
+      - name: Verify CSS and correct
+        run: npx stylelint --fix main.css
 
-#   - name: Verify HTML
-#     run: java -jar node_modules/vnu-jar/build/dist/vnu.jar --errors index.html
+      #    - name: Verify HTML
+      #      run: java -jar node_modules/vnu-jar/build/dist/vnu.jar --errors index.html
 
-    - name: Verify CSS
-      run: npx stylelint --fix main.css
+      - name: Minify HTML
+        run: npx html-minifier-terser --input-dir . --output-dir . --file-ext html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --remove-style-link-type-attributes --trim-custom-fragments --no-include-auto-generated-tags
+
+      - name: Minify CSS
+        run: npx html-minifier-terser --input-dir . --output-dir . --file-ext css --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --remove-style-link-type-attributes --trim-custom-fragments --no-include-auto-generated-tags
