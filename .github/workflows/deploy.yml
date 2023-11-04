@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Beautify HTML and CSS # use it on dev branch only
-        run: npx prettier --write .
+        run: npm run format
 
       - name: Verify CSS and correct
         run: npx stylelint --fix main.css
