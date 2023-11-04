@@ -39,7 +39,8 @@ jobs:
       - name: Minify CSS
         run: npx html-minifier-terser --input-dir . --output-dir . --file-ext css --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --remove-style-link-type-attributes --trim-custom-fragments --no-include-auto-generated-tags
 
-      - uses: mikeal/publish-to-github-action@master
+      - name: Push Changes # in test but that work
+        uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH_NAME: 'test-workflow'
