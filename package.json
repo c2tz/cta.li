@@ -12,7 +12,8 @@
     "w3c-html-validator": "^1.5.1"
   },
   "scripts": {
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "format-and-commit": "npm run format && git add . && git commit -m 'Format code with Prettier' && git push"
   }
   
 }
