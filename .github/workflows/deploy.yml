@@ -25,13 +25,18 @@ jobs:
         run: npm install
 
       - name: Beautify HTML and CSS # use it on dev branch only
-        run: npm run format-and-commit
+        run: npm run format
 
       - name: Verify CSS and correct
         run: npx stylelint --fix main.css
 
       #    - name: Verify HTML
       #      run: java -jar node_modules/vnu-jar/build/dist/vnu.jar --errors index.html
+
+      - uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_NAME: 'test-workflow'
 
       - name: Minify HTML
         run: npx html-minifier-terser --input-dir . --output-dir . --file-ext html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --remove-style-link-type-attributes --trim-custom-fragments --no-include-auto-generated-tags
