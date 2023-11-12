@@ -4,8 +4,8 @@
 /releases-base
 /static-tmp/
 /venv/
-/fonts/
-/picture/
+/static/fonts/
+/static/picture/
 /package.json
 /.prettierrc
 *.json

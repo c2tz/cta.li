@@ -1,0 +1,98 @@
+RewriteEngine On
+# Redirection des autres domaines
+RewriteCond %{HTTP_HOST} ^cerber.re$ [OR]
+# RewriteCond %{HTTP_HOST} ^crbr.re$ [OR]
+# RewriteCond %{HTTP_HOST} ^www.crbr.re$ [OR]
+# RewriteCond %{HTTP_HOST} ^crb.re$ [OR]
+RewriteCond %{HTTP_HOST} ^cta.li$ [OR]
+RewriteCond %{HTTP_HOST} ^www.cerber.re$
+# RewriteCond %{HTTP_HOST} ^www.crb.re$
+RewriteRule (.*)$ https://iez.cta.li/$1 [R=301,L]
+
+RedirectPermanent /index.html /l.html
+RedirectPermanent /index.html /l.html
+
+# Suppression "index.html"
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+
+# Suppression de certaines extensions
+RewriteEngine On
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R=301]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+# Page d'erreur
+ErrorDocument 400 /error/400.html
+ErrorDocument 401 /error/401.html
+ErrorDocument 403 /index.html
+ErrorDocument 404 /index.html
+ErrorDocument 500 /error/500.html
+ErrorDocument 501 /error/501.html
+ErrorDocument 502 /error/502.html
+ErrorDocument 503 /error/503.html
+
+# Fuck these ETag
+Header unset ETag
+FileETag none
+
+# Tweak de securite
+<IfModule mod_headers.c>
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+Header always set Referrer-Policy "no-referrer"
+# Oblige de mettre script-src 'self' au lieu de 'require-trusted-types-for' car pas supporté sur firefox alors que ok sur chrome :(
+# Pas de 'unsafe inline' pour les legacy car erreur dans la console (sur firefox toujours...)
+Header always set Content-Security-Policy "default-src 'none'; script-src 'self' 'sha256-+UNY9+qcwm5eTWcmPLDW5AGMC5gnazvMcXMYGFeLXZI=' 'sha256-s47bOiVIUyeAdCrds8GhLXRoEkt7o2Ej2/Md/rD66/8=' 'sha256-PnEH/NGYWQP6naLzfRXLFp69lfqmnEaCmQ+NX38yx6I=' 'sha256-XpBGpa7khZkk45bc8G2cpi9T6tIdNS9eiN4GyOG22eY=' 'sha256-gdC9jHR5VGUkE/Mo6xRwz5B3SqZv1iWPZB4Wf+BntDg=' 'sha256-ha3U08t3q2TWKUl1N/jeu7EdpCIGoyJ0iCqoL9qpgF4=' 'sha256-3qUsyXC5kz9vyQMYfK+ntMMFsBwytJaEh4VeYkPdlz8=' 'sha256-/N4W+018qorKBZv9m3n9MzZxAGuJDjTVyD4qdOUP6SY=' 'sha256-gbSbntXCI2ksGW/oRo67E3gQsZCcOsE6pqhkJYocWZw=' 'sha256-O6piNkhLv4BI/Oje+MccCmgUSrS1sIp+CMaOsvD/VWU=' 'sha256-66LAhbF0CtFNA5CI69bk0zm1AOZySQQmFVWfjtxok2Q=' 'sha256-PnEH/NGYWQP6naLzfRXLFp69lfqmnEaCmQ+NX38yx6I=' 'sha256-pHh21eAVZJPQDdInvsSy0TgmJOzlntsBfzI3xo/pUmg=' 'sha256-oOhpildFbf15SmAG3r/0ocv2eaBWMoZDupghB+sIEDc=' 'sha256-gbSbntXCI2ksGW/oRo67E3gQsZCcOsE6pqhkJYocWZw=' 'sha256-5gIF7HMwAgYaaj4FUcYUN9qUyqDzdmVxnLZAP/8kzkM='; connect-src 'self' https://www.cerber.re/; font-src 'self'; media-src 'self'; img-src 'self'; manifest-src 'self'; style-src 'self' 'sha256-edGhdC+99JsaG0ohy7QX1dwfQ1OxPI3ElN0IJPcznSQ='; form-action 'none'; object-src 'none'; frame-ancestors 'none'; block-all-mixed-content; base-uri 'none'"
+Header always set Permissions-Policy "accelerometer=(), autoplay=(), camera=(), clipboard-read=(), clipboard-write=(), display-capture=(), document-domain=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), sync-xhr=(), usb=(), xr-spatial-tracking=()"
+Header always set Cross-Origin-Embedder-Policy "require-corp"
+Header always set Cross-origin-Opener-Policy "same-origin"
+Header always set Cross-Origin-Resource-Policy "same-origin"
+Header always set Except-CT "enforce; max-age=63072000"
+Header always set X-Frame-Options "DENY"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Xss-Protection "1; mode=block"
+</IfModule>
+
+# Controle de l'expiration des headers
+<IfModule mod_expires.c>
+ ExpiresActive On
+ ExpiresDefault "access plus 7200 seconds"
+ AddType font/woff2 .woff2
+ ExpiresByType font/woff2 "access plus 31536000 seconds"
+ ExpiresByType image/jpg "access plus 31536000 seconds"
+ ExpiresByType image/jpeg "access plus 31536000 seconds"
+ ExpiresByType image/png "access plus 31536000 seconds"
+ ExpiresByType image/gif "access plus 31536000 seconds"
+ ExpiresByType image/svg+xml "access plus 31536000 seconds"
+ AddType image/x-icon .ico
+ ExpiresByType image/ico "access plus 31536000 seconds"
+ ExpiresByType image/icon "access plus 31536000 seconds"
+ ExpiresByType image/x-icon "access plus 31536000 seconds"
+ ExpiresByType text/css "access plus 31536000 seconds"
+ ExpiresByType text/javascript "access plus 31536000 seconds"
+ ExpiresByType text/html "access plus 7200 seconds"
+ ExpiresByType application/xhtml+xml "access plus 7200 seconds"
+ ExpiresByType application/javascript "access plus 31536000 seconds"
+ ExpiresByType application/x-javascript "access plus 31536000 seconds"
+ ExpiresByType application/x-shockwave-flash "access plus 31536000 seconds"
+</IfModule>
+
+# Debut des en-tete du cache
+<IfModule mod_headers.c>
+<FilesMatch "\\.(woff2)$">
+ Header set Cache-Control "max-age=31536000, immutable"
+ </FilesMatch>
+ <FilesMatch "\\.(ico|jpeg|jpg||png|gif|swf|svg|gz|ttf)$">
+ Header set Cache-Control "max-age=31536000, immutable"
+ </FilesMatch>
+ <FilesMatch "\\.(css)$">
+ Header set Cache-Control "max-age=31536000, immutable"
+ </FilesMatch>
+ <FilesMatch "\\.(js)$">
+ Header set Cache-Control "max-age=31536000, private"
+ </FilesMatch>
+<filesMatch "\\.(html|htm)$">
+Header set Cache-Control "max-age=7200, immutable"
+</filesMatch>
+</IfModule>
