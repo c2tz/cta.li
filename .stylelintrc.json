@@ -1,0 +1,8 @@
+{
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "media-feature-range-notation": null,
+        "number-max-precision": null,
+        "declaration-block-single-line-max-declarations": null
+    }
+}

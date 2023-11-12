@@ -1,5 +1,6 @@
-# gcc coverage testing tool files
-
-*.gcno
-*.gcda
-*.gcov
+/lock
+/nginx-tmp/
+/node_modules/
+/releases-base
+/static-tmp/
+/venv/
