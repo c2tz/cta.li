@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="fr">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<html lang="fr" prefix="og: https://ogp.me/ns#">
+	<meta charset="utf-8"/>
 	<title>@c2tz | Accueil</title>
 	<meta name="description" content="Bienvenue sur le site web personnel de c2tz." />
-	<meta name="msapplication-TileColor" content="#ffffff" />
 	<meta name="theme-color" content="#000000" />
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="msapplication-TileColor" content="#ffffff" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<meta property="og:title" content="c2tz" />
 	<meta property="og:description" content="Bienvenue sur le site web personnel de c2tz." />
 	<meta property="og:type" content="website" />
@@ -15,14 +15,14 @@
 	<meta property="og:image:alt" content="c2tz logo" />
 	<meta property="og:site_name" content="c2tz" />
 	<meta property="og:url" content="https://cta.li/" />
+	<link rel="canonical" href="https://cta.li/" />
 	<link rel="stylesheet" href="/main.css" />
 	<link rel="icon" href="/favicon.ico" sizes="any" />
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 	<link rel="manifest" href="/manifest.webmanifest" />
-	<link rel="canonical" href="https://cta.li/" />
 	<link rel="license" href="/LICENSE.txt" />
 	<link rel="me" href="https://crb.re/@c2tz" />
-	<div id="svelte">
+	<main id="c2tz's personal website">
 		<div class="bg-hex-1a1d1a min-h-100vh flex flex-col">
 			<header class="svelte-1ena5bt">
 				<div class="mx-auto max-w-1024px py-60px md-py-80px xl-py-120px px-20px">
@@ -55,8 +55,8 @@
 			</header>
 			<div class="main bg-hex-edefe3 rounded-t-50px flex-1 py-15px pb-50px lg-py-50px svelte-16y6iu1">
 				<div class="mx-auto max-w-1024px px-10px lg-px-20px gap-40px flex flex-col">
-					<div class="flex flex-col bg-hex-fcf9ef px-30px py-40px lg-p-40px gap-20px rounded-50px">
-						<div class="flex items-center justify-between"><span class="uppercase font-bold text-18px text-hex-000">Liens</span></div>
+					<div class="section">
+						<div class="section-top"><span class="section-title">Liens</span></div>
 						<div class="link">
 							<a href="https://000.re" class="link-tab dev" target="_blank" rel="me noopener noreferrer">
 								<div class="link-tab-icon"><img alt="" src="/assets/svg/blog.svg" height="30" width="30" /></div>
@@ -102,49 +102,49 @@
 							</a>
 						</div>
 					</div>
-					<div class="flex flex-col bg-hex-fcf9ef px-30px py-40px lg-p-40px gap-20px rounded-50px">
-						<div class="flex items-center justify-between"><span class="uppercase font-bold text-18px text-hex-000">Projects</span></div>
-						<div class="gap-20px grid md-grid-cols-2 lg-grid-cols-3">
-							<a class="bg-hex-f6f3d4 flex flex-col rounded-40px overflow-hidden" href="" target="_blank" rel="noopener noreferrer">
-								<img class="h-100px object-cover" src="/assets/card.png" alt="" loading="lazy" />
-								<div class="uppercase flex flex-col p-20px px-25px flex-1 text-hex-000">
-									<span class="font-bold">000.re</span>
-									<span class="font-semibold text-xs leading-5 opacity-70">Mon blog, réalisé avec HUGO et le thème PaperMod (bientot hextra), docs, tutos, blog ...</span>
+					<div class="section">
+						<div class="section-top"><span class="section-title">Projets</span></div>
+						<div class="projects">
+							<a class="projects-tab" href="" target="_blank" rel="noopener noreferrer">
+								<img class="projects-tab-icon" src="/assets/card.png" alt="" loading="lazy" />
+								<div class="projects-tab-title-text">
+									<span class="projects-tab-title">000.re</span>
+									<span class="projects-tab-text">Mon blog, réalisé avec HUGO et le thème PaperMod (bientot hextra), docs, tutos, blog ...</span>
 								</div>
 							</a>
-							<a class="bg-hex-f6f3d4 flex flex-col rounded-40px overflow-hidden" href="" target="_blank" rel="noopener noreferrer">
-								<img class="h-100px object-cover" src="/assets/card.png" alt="" loading="lazy" />
-								<div class="uppercase flex flex-col p-20px px-25px flex-1 text-hex-000">
-									<span class="font-bold">Script Batch</span>
-									<span class="font-semibold text-xs leading-5 opacity-70">Ma collection de script MS-DOS</span>
+							<a class="projects-tab" href="" target="_blank" rel="noopener noreferrer">
+								<img class="projects-tab-icon" src="/assets/card.png" alt="" loading="lazy" />
+								<div class="projects-tab-title-text">
+									<span class="projects-tab-title">Script Batch</span>
+									<span class="projects-tab-text">Ma collection de script MS-DOS</span>
 								</div>
 							</a>
-							<a class="bg-hex-f6f3d4 flex flex-col rounded-40px overflow-hidden" href="" target="_blank" rel="noopener noreferrer">
-								<img class="h-100px object-cover" src="/assets/card.png" alt="" loading="lazy" />
-								<div class="uppercase flex flex-col p-20px px-25px flex-1 text-hex-000">
-									<span class="font-bold">cta.li</span>
-									<span class="font-semibold text-xs leading-5 opacity-70">Ce site. Simple site statique mais avec beautify, minify, linters etc...</span>
+							<a class="projects-tab" href="" target="_blank" rel="noopener noreferrer">
+								<img class="projects-tab-icon" src="/assets/card.png" alt="" loading="lazy" />
+								<div class="projects-tab-title-text">
+									<span class="projects-tab-title">cta.li</span>
+									<span class="projects-tab-text">Ce site. Simple site statique mais avec beautify, minify, linters etc...</span>
 								</div>
 							</a>
-							<a class="bg-hex-f6f3d4 flex flex-col rounded-40px overflow-hidden" href="" target="_blank" rel="noopener noreferrer">
-								<img class="h-100px object-cover" src="/assets/card.png" alt="" loading="lazy" />
-								<div class="uppercase flex flex-col p-20px px-25px flex-1 text-hex-000">
-									<span class="font-bold">Serveur Matrix Synapse</span>
-									<span class="font-semibold text-xs leading-5 opacity-70">Serveur Synapse, auto-hebergé pour le chat chiffré</span>
+							<a class="projects-tab" href="" target="_blank" rel="noopener noreferrer">
+								<img class="projects-tab-icon" src="/assets/card.png" alt="" loading="lazy" />
+								<div class="projects-tab-title-text">
+									<span class="projects-tab-title">Serveur Matrix Synapse</span>
+									<span class="projects-tab-text">Serveur Synapse, auto-hebergé pour le chat chiffré</span>
 								</div>
 							</a>
-							<a class="bg-hex-f6f3d4 flex flex-col rounded-40px overflow-hidden" href="" target="_blank" rel="noopener noreferrer">
-								<img class="h-100px object-cover" src="/assets/card.png" alt="" loading="lazy" />
-								<div class="uppercase flex flex-col p-20px px-25px flex-1 text-hex-000">
-									<span class="font-bold">Serveur Mastodon</span>
-									<span class="font-semibold text-xs leading-5 opacity-70">Serveur auto-hebergé pour le réseau social Mastodon</span>
+							<a class="projects-tab" href="" target="_blank" rel="noopener noreferrer">
+								<img class="projects-tab-icon" src="/assets/card.png" alt="" loading="lazy" />
+								<div class="projects-tab-title-text">
+									<span class="projects-tab-title">Serveur Mastodon</span>
+									<span class="projects-tab-text">Serveur auto-hebergé pour le réseau social Mastodon</span>
 								</div>
 							</a>
 						</div>
 					</div>
-					<div class="flex flex-col bg-hex-fcf9ef px-30px py-40px lg-p-40px gap-20px rounded-50px">
-						<div class="flex items-center justify-between">
-							<span class="uppercase font-bold text-18px text-hex-000">Mes Exploits</span>
+					<div class="section">
+						<div class="section-top">
+							<span class="section-title">Mes Exploits</span>
 							<a href="https://www.komoot.com/fr-fr/user/1042380125464?ref=wud" class="rounded-full uppercase font-bold text-14px bg-hex-dbea8d py-5px px-20px text-hex-000" target="_blank">Voir Plus</a>
 						</div>
 						<div class="gap-20px grid md-grid-cols-3 md-auto-rows-min">
