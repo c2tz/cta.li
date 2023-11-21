@@ -375,6 +375,12 @@ footer a {
 	.section {
 		padding: 40px;
 	}
+	.section-front {
+		padding: 50px 0 0px 0;
+	}
+	.section-all {
+		padding: 0 20px;
+	}
     .link {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -479,6 +485,12 @@ header.svelte-1ena5bt {
 
 /* clean css without tailwind */
 
+.email-text {
+	color: rgb(54 60 51 / var(--tw-text-opacity));
+	font-size: 16px;
+	font-weight: 700;
+}
+
 .link {
     display: grid;
     gap: 20px;
@@ -560,6 +572,22 @@ header.svelte-1ena5bt {
 	padding: 30px 40px 30px 40px;
 	gap: 20px;
 	border-radius: 50px;
+}
+.section-front {
+	background-color: rgb(237 239 227 / var(--tw-bg-opacity));
+	border-radius: 50px 50px 0 0;
+	flex: 1 1 0%;
+	padding: 15px 0 0px 0;
+	z-index: 1;
+	transform: translateZ(0), translate3d(0, 0, 0);
+}
+.section-all {
+	margin: 0 auto; /* a verifier pour le 0 */
+	max-width: 1024px;
+	padding : 0 10px;
+	gap: 40px;
+	display: flex;
+	flex-direction: column;
 }
 .section-top {
 	display: flex;
