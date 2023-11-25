@@ -7,8 +7,7 @@
 	border-color: #e5e7eb;
 }
 :root {
-	--scrollbar-track-color: #fff;
-	--scrollbar-thumb-color: #616200;
+	/* mettre les vars ici */
 	tab-size: 4;
 }
 abbr[title] {
@@ -321,6 +320,12 @@ footer a {
 	grid-auto-rows: min-content;
 }
 @media (width >=768px) {
+	.email-border {
+		padding: 10px;
+	}
+	.email-button {
+		padding: 10px 20px 10px 20px;
+	}
     .link {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -423,17 +428,6 @@ footer a {
 		padding-bottom: 120px;
 	}
 }
-::-webkit-scrollbar {
-	width: 10px;
-	background-color: #fff;
-}
-::-webkit-scrollbar-track {
-	background-color: #fff;
-}
-::-webkit-scrollbar-thumb {
-	border-radius: 8px;
-	background-color: #616200;
-}
 header.svelte-1ena5bt {
 	position: sticky;
 	top: 0;
@@ -484,6 +478,23 @@ header.svelte-1ena5bt {
 }
 
 /* clean css without tailwind */
+.email-border {
+	display: flex;
+	border-radius: 9999px;
+	background-color: rgb(56 57 52 / var(--tw-bg-opacity));
+	padding: 8px;
+	font-size: 14px;
+	line-height: 1;
+}
+
+.email-button {
+	display: flex;
+	gap: 15px;
+	border-radius: 9999px;
+	background-color: rgb(217 234 215 / var(--tw-bg-opacity));
+	padding: 8px 15px 8px 15px;
+	align-items: center;
+}
 
 .email-text {
 	color: rgb(54 60 51 / var(--tw-text-opacity));
