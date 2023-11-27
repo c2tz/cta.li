@@ -333,6 +333,9 @@ footer svg {
 }
 
 @media only screen and (max-width: 768px) {
+	.section-button {
+		display: none;
+	}
 	.hero-responsive {
 		width: 120px;
 		height: 120px;
@@ -340,6 +343,21 @@ footer svg {
 }
 
 @media only screen and (min-width: 768px) {
+	.section-button {
+			color: #000;
+			font-size: 1rem;
+			letter-spacing: 0.1px;
+			background-color: rgb(252 249 239 / 1);
+			border-radius: 20px;
+			border: none;
+			padding: 9px 24px;
+			font-weight: 700;
+			transition: .2s ease-in-out 0s;
+			transition-property: box-shadow;
+	}
+	.section-button:hover, .section-button:focus {
+		box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
+	}
 	.hero-responsive {
 		width: 150px;
 		height: 150px;
@@ -570,6 +588,10 @@ footer svg {
 .projects-tab.dev {
 	background-color: rgb(255 205 210 / 1);
 }
+.link-tab.not-ready,
+.projects-tab.not-ready {
+	background-color: rgb(255 204 188 / 1);
+}
 .projects {
 	display: grid;
 	gap: 20px;
@@ -639,8 +661,7 @@ footer svg {
 }
 p.section-text {
 	font-size: 0.9rem;
-	margin-block-start: 0em;
-	margin-block-end: 0em;
+	margin-block: unset;
 }
 .hero {
 	display: flex;
@@ -680,27 +701,6 @@ p.section-text {
 	top: 0;
 	left: 0;
 	z-index: 0;
-}
-
-w-120px h-120px md-w-150px md-h-150px lg-w-180px lg-h-180px .hero-responsive {
-	width: 120px;
-	height: 120px;
-}
-
-header.svelte-1ena5bt {
-	position: sticky;
-	top: 0;
-	left: 0;
-	z-index: 0;
-}
-.icon.svelte-1kp182d svg {
-	width: 30px;
-	height: 30px;
-}
-.main.svelte-16y6iu1 {
-	z-index: 1;
-	transform: translateZ(0);
-	transform: translate3d(0, 0, 0);
 }
 
 /* test gotop prendre le code sur staging.cerber.re */
