@@ -12,11 +12,11 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "crb.re"
+          "value": "cta.li"
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' crb.re; img-src 'self' crb.re; style-src 'self';"
+          "value": "default-src 'self'; script-src 'self' cta.li; img-src 'self' cta.li; style-src 'self';"
         },
         {
           "key": "Strict-Transport-Security",
@@ -56,7 +56,7 @@
         },
         {
           "key": "X-Powered-By",
-          "value": "c2tz"
+          "value": "Vercel"
         },
         {
           "key": "Permissions-Policy",
