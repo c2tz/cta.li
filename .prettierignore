@@ -1,1 +1,3 @@
-# add files to ignore
+package.json
+package-lock.json
+sitemap.xml
