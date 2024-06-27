@@ -1,27 +1,21 @@
-name: Code Quality checks
+name: Format
 on:
-  push:
-    branches: [develop]
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
+  pull_request:
+    branches: [main]
 jobs:
-  prettier:
-    name: Prettier
-    runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        node-version: [18]
+  format:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
-          version: 8
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - name: Install dependencies
-        run: npm install -D
-      - name: Check formatting with Prettier
-        run: npm run prettier:check:ci
+          node-version: "16.x"
+      - run: npm ci
+      - run: npm run format
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Apply formatting changes
+          branch: ${{ github.head_ref }}
