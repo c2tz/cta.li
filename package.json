@@ -3,6 +3,7 @@
     "prettier": "3.3.1"
   },
   "scripts": {
-    "format": "prettier --write ."
+    "prettier:format": "prettier --write \"**/*.{ts,tsx,js,md,mdx,css,yaml}\"",
+    "prettier:check": "prettier --check \"**/*.{ts,tsx,js,md,mdx,css,yaml}\""
   }
 }
