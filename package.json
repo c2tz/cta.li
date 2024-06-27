@@ -3,7 +3,6 @@
     "prettier": "3.3.1"
   },
   "scripts": {
-    "prettier:format": "prettier --write --ignore-unknown",
-    "prettier:check:ci": "prettier --check --ignore-unknown"
+    "format": "prettier --write ."
   }
 }
