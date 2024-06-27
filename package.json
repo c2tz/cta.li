@@ -3,7 +3,7 @@
     "prettier": "3.3.1"
   },
   "scripts": {
-    "prettier:format": "prettier --write \"**/*.{json,html,js,css,yaml}\"",
-    "prettier:check:ci": "prettier --check \"**/*.{{json,html,js,css,yaml}\""
+    "prettier:format": "prettier --write --ignore-unknown",
+    "prettier:check:ci": "prettier --check --ignore-unknown"
   }
 }
