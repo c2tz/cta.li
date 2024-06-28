@@ -1,9 +1,12 @@
 {
   "devDependencies": {
-    "prettier": "3.3.1"
+    "prettier": "3.3.1",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.1"
   },
   "scripts": {
     "prettier:format": "prettier --write \"**/*.{css,html}\"",
-    "prettier:check": "prettier --check \"**/*.{css,html}\""
+    "prettier:check": "prettier --check \"**/*.{css,html}\"",
+    "stylelint:check": "stylelint \"**/*.css\""
   }
 }
