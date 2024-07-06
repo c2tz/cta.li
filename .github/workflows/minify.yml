@@ -23,3 +23,9 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add static/*.html static/*.css
           git commit -m "Add minified HTML and CSS files"
+      - name: Push Changes to GitHub
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          force: false
