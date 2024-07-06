@@ -1,0 +1,20 @@
+name: Code Minify (HTMLMinifier)
+on:
+  push:
+    branches: [develop]
+jobs:
+  html-minifier-terser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm install -D
+      - name: Minify HTML
+        run: npm run minifier-html:format
+      - name: Minify CSS
+        run: npm run minifier-css:format
+        
