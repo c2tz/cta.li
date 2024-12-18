@@ -1,0 +1,31 @@
+name: Code Minify (HTMLMinifier)
+on:
+  push:
+    branches: [main]
+jobs:
+  html-minifier-terser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm install -D
+      - name: Minify HTML
+        run: npm run minifier-html:format
+      - name: Minify CSS
+        run: npm run minifier-css:format
+      - name: Add minified files to commit
+        run: |
+          git config --local user.email "action[bot]@github.com"
+          git config --local user.name "github-actions[bot]"
+          git add static/*.html static/*.css
+          git commit -m "Add minified HTML and CSS files"
+      - name: Push Changes to GitHub
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          force: false
