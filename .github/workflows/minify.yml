@@ -22,11 +22,10 @@ jobs:
           git config --local user.email "action[bot]@github.com"
           git config --local user.name "github-actions[bot]"
           git add static/*.html static/*.css
-          # On vérifie s'il y a des changements avant de commiter
           if [[ -n $(git status --porcelain) ]]; then
             git commit -m "Add minified HTML and CSS files"
           else
-            echo "Aucun changement à commiter"
+            echo "Nothing to commit"
           fi
       - name: Push Changes to GitHub
         if: success() # push ONLY if commits success
