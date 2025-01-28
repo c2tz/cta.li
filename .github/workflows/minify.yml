@@ -22,16 +22,16 @@ jobs:
           git config --local user.email "action[bot]@github.com"
           git config --local user.name "github-actions[bot]"
           git add static/*.html static/*.css
-          # On vérifie s'il y a des changements avant de commiter
+          # ----- chk if changes exist -----
           if [[ -n $(git status --porcelain) ]]; then
             git commit -m "Add minified HTML and CSS files"
           else
-            echo "Aucun changement à commiter"
+            echo "Nothing to commit"
           fi
       - name: Push Changes to GitHub
-        if: success() # Ne push que si le commit a réussi
+        if: success() # Push only if commit success
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main # Plus explicite que ${{ github.ref }}
+          branch: main # More explicit than ${{ github.ref }}
           force: false
