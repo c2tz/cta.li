@@ -1,2 +1,6 @@
 User-agent: *
 Disallow: /
+
+Allow: l.html
+
+Sitemap: https://iez.cta.li/sitemap.xml
