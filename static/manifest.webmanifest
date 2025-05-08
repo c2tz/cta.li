@@ -1,9 +1,9 @@
 {
 	"theme_color": "#000000",
 	"background_color": "#ffffff",
-	"name": "c2tz",
-	"short_name": "c2tz",
-	"start_url": "https://iez.cta.li/l",
+	"name": "Clément TAILLIEZ",
+	"short_name": "Clément TAILLIEZ",
+	"start_url": "/l",
 	"display": "minimal-ui",
 	"icons": [
 		{

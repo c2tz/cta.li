@@ -19,8 +19,8 @@ jobs:
         run: npm run minifier-css:format
       - name: Add minified files to commit
         run: |
-          git config --local user.email "action[bot]@github.com"
-          git config --local user.name "github-actions[bot]"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add static/*.html static/*.css
           # ----- chk if changes exist -----
           if [[ -n $(git status --porcelain) ]]; then
