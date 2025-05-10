@@ -1,11 +1,12 @@
 {
   "devDependencies": {
+    "clean-css-cli": "^5.6.3",
     "stylelint": "^16.6.1",
     "stylelint-config-standard": "^36.0.1"
   },
   "scripts": {
     "stylelint:check": "stylelint \"**/*.css\"",
-    "minifier-css:format": "html-minifier-terser --input-dir ./static/ --output-dir ./static/ --file-ext css --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --minify-css true --remove-style-link-type-attributes --trim-custom-fragments --no-include-auto-generated-tags",
-    "minifier-html:format": "html-minifier-terser --input-dir ./static/ --output-dir ./static/ --file-ext html --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-attribute-quotes --remove-tag-whitespace --minify-css true --remove-style-link-type-attributes --trim-custom-fragments --no-include-auto-generated-tags"
+    "minifier-html:format": "html-minifier-terser --input-dir ./static/ --output-dir ./static/ --file-ext html --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-attribute-quotes --remove-tag-whitespace --minify-css true --remove-style-link-type-attributes --trim-custom-fragments --no-include-auto-generated-tags",
+    "minify-css:format": "cleancss ./static/main.css -o ./static/main.css --compatibility '*'"
   }
 }
