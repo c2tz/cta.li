@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /l.html
-Sitemap: https://iez.cta.li/sitemap.xml
+Sitemap: https://cta.li/sitemap.xml
