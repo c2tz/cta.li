@@ -18,24 +18,24 @@ table {
 main {
     padding: 1em;
     overflow-wrap: break-word
-} /*
+} */
 
 html {
     height: -webkit-fill-available
 }
 
-body {
+/* body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     min-height: -webkit-fill-available;
-    /* font-family: Roboto, sans-serif; */
+    /* font-family: Roboto, sans-serif;
     background-color: #fff;
     margin: 0;
     padding: 0;
     overflow-y: scroll;
     line-height: 1.5
-}
+} */
 
 a {
     color: #1565c0;
