@@ -11,6 +11,10 @@
     {
       "source": "/(.*)",
       "headers": [
+        {  
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        },
         {
           "key": "Access-Control-Allow-Origin",
           "value": "cta.li"
