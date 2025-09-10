@@ -14,11 +14,11 @@ table {
     width: 100%
 }
 
-footer,
+/* footer,
 main {
     padding: 1em;
     overflow-wrap: break-word
-}
+} /*
 
 html {
     height: -webkit-fill-available
@@ -114,10 +114,10 @@ td {
     padding: .5rem
 }
 
-main {
+/* main {
     min-width: 0;
     box-sizing: border-box
-}
+} */
 
 @font-face {
     font-family: Roboto;
