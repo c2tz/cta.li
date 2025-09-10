@@ -9,6 +9,10 @@ main {
     max-width: 832px
 }
 
+.break p, .coin-address, footer {
+  text-align: center;
+}
+
 .surface {
   background-color: #e6e6e6;
   width: 100%;
