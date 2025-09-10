@@ -6,7 +6,8 @@ main {
 
 .content,
 main {
-    max-width: 832px
+    max-width: 100vw
+    /* max-width: 832px */
 }
 
 main,
