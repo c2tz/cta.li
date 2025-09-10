@@ -9,6 +9,11 @@ main {
     max-width: 832px
 }
 
+html, body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
 main,
 table {
     width: 100%
