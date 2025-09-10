@@ -4,12 +4,6 @@ main {
     margin-right: auto
 }
 
-main.normalize {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 .content,
 main {
     max-width: 832px
