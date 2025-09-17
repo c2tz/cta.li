@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /l.html
-Sitemap: https://cta.li/sitemap.xml
+Disallow: /
