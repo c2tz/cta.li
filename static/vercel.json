@@ -17,11 +17,11 @@
         },
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "staging.cta.li"
+          "value": "cta.li"
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'sha256-1jAmyYXcRq6zFldLe/GCgIDJBiOONdXjTLgEFMDnDSM=' staging.cta.li; img-src 'self' staging.cta.li; style-src 'self';"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-hashes' 'sha256-1jAmyYXcRq6zFldLe/GCgIDJBiOONdXjTLgEFMDnDSM=' cta.li staging.cta.li; img-src 'self' cta.li staging.cta.li; style-src 'self';"
         },
         {
           "key": "Strict-Transport-Security",
