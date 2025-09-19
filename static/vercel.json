@@ -48,6 +48,10 @@
           "value": "enforce; max-age=63072000"
         },
         {
+          "key": "Accept-Encoding",
+          "value": "br"
+        },
+        {
           "key": "Cross-Origin-Resource-Policy",
           "value": "cross-origin"
         },
