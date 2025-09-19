@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "https://iez.cta.li/l",
+      "destination": "/l",
       "permanent": false
     }
   ],
@@ -21,7 +21,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' cta.li; img-src 'self' cta.li; style-src 'self';"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-hashes' 'sha256-1jAmyYXcRq6zFldLe/GCgIDJBiOONdXjTLgEFMDnDSM=' cta.li staging.cta.li; img-src 'self' cta.li staging.cta.li; style-src 'self';"
         },
         {
           "key": "Strict-Transport-Security",
@@ -48,6 +48,10 @@
           "value": "enforce; max-age=63072000"
         },
         {
+          "key": "Accept-Encoding",
+          "value": "br"
+        },
+        {
           "key": "Cross-Origin-Resource-Policy",
           "value": "cross-origin"
         },
@@ -61,7 +65,7 @@
         },
         {
           "key": "X-Powered-By",
-          "value": "Vercel"
+          "value": "c2tz"
         },
         {
           "key": "Permissions-Policy",
