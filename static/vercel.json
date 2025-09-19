@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "staging.cta.li",
+      "destination": "https://iez.cta.li/l",
       "permanent": false
     }
   ],
