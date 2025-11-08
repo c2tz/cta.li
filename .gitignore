@@ -1,3 +1,4 @@
 /node_modules
 /.vscode
 static/vercel.json
+.DS_Store
